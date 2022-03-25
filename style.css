@@ -1,0 +1,207 @@
+.hidden_loggin{
+    
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #198754;
+}
+h2,h3,h4{
+    color: #198754;
+}
+p{
+    color:#198754;
+    font-size: 1.4rem;
+}
+.datosKg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem ;
+}
+
+
+.datosLb{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.datosLb input{
+    width: 15rem;
+    text-align: center;
+}
+
+.datosGeneral{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.datosKg input{
+    width: 15rem;
+    text-align: center;
+}
+
+
+
+.hidden_loggin{
+    display : none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alert{
+    display : none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista_usuarios{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#confirmado{
+    display: none;
+}
+
+#negado{
+    display: none;
+}
+
+.CalculadoraIMC{
+    margin-top: 2rem;
+    height: auto;
+    width: 50%;
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.padreCalc{
+    display: flex;
+    justify-content: center;
+}
+
+.genero{
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+
+.genero img{
+   border-radius: 360px;
+    width: 7rem;
+    margin-top: 2rem;
+}
+
+.genero img:hover{
+    opacity: 80%;
+    transform: scale(1.3);
+}
+.hombre{
+    margin-right: 10rem;
+}
+
+
+.venta_dietas{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.carrito img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 3rem;
+}
+
+/* From cssbuttons.io by @adamgiebl */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+   }
+   
+   /* Hide default HTML checkbox */
+   .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   /* The slider */
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: .4s;
+   }
+   
+   input:checked + .slider {
+    background-color: #2196F3;
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.5em);
+   }
+
+   .main{
+       background-color:#cacaca ;
+   }
+
+   .main_darkmode{
+    background-color:#2f2f2f
+   }
+
+   .items{
+       margin-bottom: 4rem;
+   }
+  
+.btn-dark img{
+    width: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+}
