@@ -61,7 +61,7 @@ function calcularIMCKg(estatura, peso){
         let resultadoKg = document.getElementById('resultadoKg');
         if(resultadoKg > 0 && resultadoKg < 50){
             resultadoKg.innerHTML = '<h2>Su IMC es de: </h2>' + resultadoIMCKg;
-            tablaIMCKg(resultadoIMCKg);   
+            tablaIMCKg(resultadoIMCKg);
             return resultadoIMCKg;
         }
 }
@@ -81,25 +81,29 @@ function calcularIMCLb(estatura,peso){
 //FUNCION QUE MUESTRA EL MENU DE REGISTRO
 function abrir_menu(){
     div_hidden.style.display= 'block';
+    document.getElementById('datosKg').style.display="flex";
+    document.getElementById('ocultar_add').style.display="flex";
 }
 //FUNCION QUE OCULTA EL MENU DE REGISTRO
 function ocultar(){
     hidden_loggin.style.display = 'none';
     alert_confirm.style.display = 'none';
     negado.style.display = 'none';
-    lista_usuarios.style.display = 'none'; 
+    lista_usuarios.style.display = 'none';
+    document.getElementById('ocultar_add').style.display="none"; 
 }
 //CREA Y AGREGA LA CLASE USUARIO A EL ARRAY
 function addUsr(){
     //CREACION DE USUARIO NUEVO
     var nombre = document.getElementById('nombre').value;
     var edad = document.getElementById('edad').value;
+    var div = document.getElementById('datosKg');
+    console.log('div');
     if(nombre.trim() === ""){
             alert_confirm.style.display = 'none';
             negado.style.display= 'block'; 
         
     }else{
-        
             let nombre = document.getElementById('nombre').value;
             console.log(select.value)
             let edad = document.getElementById('edad').value;
@@ -113,7 +117,6 @@ function addUsr(){
             negado.style.display = 'none';      
             console.log(persona); 
     }   
-
     agregarUsuarioSelect();
 }
 
@@ -496,5 +499,6 @@ document.getElementById('boton-comprar').addEventListener('click', ()=>{
         timer: 1500
       })
 })
+
 
 
