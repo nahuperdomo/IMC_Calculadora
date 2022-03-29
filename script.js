@@ -76,8 +76,6 @@ function calcularIMCLb(estatura,peso){
 }
 
 
-
-
 //FUNCION QUE MUESTRA EL MENU DE REGISTRO
 function abrir_menu(){
     div_hidden.style.display= 'block';
@@ -234,7 +232,6 @@ let btn_kg = document.getElementById('btn_kg');
 btn_kg.addEventListener("click",calcularKg);
 
 //BOTON CALCULAR IMC LB
-
 
 //BOTON AGREGAR USUARIO
 let btn_add = document.getElementById('add_usr');
@@ -500,5 +497,28 @@ document.getElementById('boton-comprar').addEventListener('click', ()=>{
       })
 })
 
+const url =' https://randomuser.me/api/';
 
+let avatar = document.getElementById('avatar');
+let fullname = document.getElementById('fullname');
+let username = document.getElementById('username');
+let email = document.getElementById('email');
+let city = document.getElementById('city');
+let btn = document.getElementById('btn');
 
+btn.addEventListener("click", function() {
+  fetch(url)
+    .then(parseJSON)
+    .then(nuevoPerfil)
+});
+
+function parseJSON (res){
+  return res.json();
+}
+
+function nuevoPerfil (profile){
+  avatar.src = profile.results[0].picture.medium;
+  fullname.innerHTML = profile.results[0].name.first +" "+profile.results[0].name.last; 
+  username.innerHTML = profile.results[0].login.username; 
+  email.innerHTML = profile.results[0].email;
+}
