@@ -98,8 +98,13 @@ function addUsr(){
     var div = document.getElementById('datosKg');
     console.log('div');
     if(nombre.trim() === ""){
-            alert_confirm.style.display = 'none';
-            negado.style.display= 'block'; 
+        alert_confirm.style.display = 'none';
+        negado.style.display= 'flex'; 
+        
+        setTimeout(()=>{
+        alert_confirm.style.display = 'none';
+        negado.style.display= 'none';
+        },4000)
         
     }else{
             let nombre = document.getElementById('nombre').value;
@@ -111,9 +116,12 @@ function addUsr(){
             localStorage.setItem("personas",JSON.stringify(persona));
             document.getElementById('nombre').value = "" //RESETEO EL PLACEHOLDER NOMBRE
             document.getElementById('edad').value = "" //RESETEO EL PLACEHOLDER EDAD
-            alert_confirm.style.display= 'block';
+            alert_confirm.style.display= 'flex';
             negado.style.display = 'none';      
             console.log(persona); 
+            setTimeout(()=>{
+                alert_confirm.style.display = 'none';
+                },4000)
     }   
     agregarUsuarioSelect();
 }
@@ -185,13 +193,16 @@ function tablaIMCLb(x){
 const recorreArray = (arr) => {
 
         arr = colPersonas;
-        lista_usuarios.innerHTML=""
+        
         lista_usuarios.style.display= 'block';
-      
+        lista_usuarios.innerHTML= "";
         for(let i=0; i<=arr.length-1; i++){
+            let li = document.createElement('li');
+            let vari = JSON.stringify(arr[i].nombre);
+            let sincomilla = JSON.parse(vari);
+            li.append(sincomilla);
 
-            console.log(arr[i]);
-            lista_usuarios.append(i+1 + "." + arr[i].nombre + "--") ;
+            lista_usuarios.appendChild(li);
         }
   }
 
